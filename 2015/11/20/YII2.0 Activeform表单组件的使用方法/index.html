@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>前端开发者手册 | WEB前端笔记</title>
+    <title>YII2.0 Activeform表单组件的使用方法 | WEB前端笔记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="wanzh">
     
 
     
-    <meta name="description" content="前端开发者手册">
+    <meta name="description" content="Activeform文本框:textInput();密码框:passwordInput();单选框:radio(),radioList();复选框:checkbox(),checkboxList();下拉框:dropDownList();隐藏域:hiddenInput();文本域:textarea([‘rows’=&amp;gt;3]);文件上传:fileInput();提交按钮:submitButton">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端开发者手册">
-<meta property="og:url" content="http://yoursite.com/2015/10/30/前端开发者手册/index.html">
+<meta property="og:title" content="YII2.0 Activeform表单组件的使用方法">
+<meta property="og:url" content="http://yoursite.com/2015/11/20/YII2.0 Activeform表单组件的使用方法/index.html">
 <meta property="og:site_name" content="WEB前端笔记">
-<meta property="og:description" content="前端开发者手册">
-<meta property="og:updated_time" content="2015-10-30T06:40:12.901Z">
+<meta property="og:description" content="Activeform文本框:textInput();密码框:passwordInput();单选框:radio(),radioList();复选框:checkbox(),checkboxList();下拉框:dropDownList();隐藏域:hiddenInput();文本域:textarea([‘rows’=&amp;gt;3]);文件上传:fileInput();提交按钮:submitButton">
+<meta property="og:updated_time" content="2015-11-20T10:25:49.005Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端开发者手册">
-<meta name="twitter:description" content="前端开发者手册">
+<meta name="twitter:title" content="YII2.0 Activeform表单组件的使用方法">
+<meta name="twitter:description" content="Activeform文本框:textInput();密码框:passwordInput();单选框:radio(),radioList();复选框:checkbox(),checkboxList();下拉框:dropDownList();隐藏域:hiddenInput();文本域:textarea([‘rows’=&amp;gt;3]);文件上传:fileInput();提交按钮:submitButton">
 
     
     <link rel="alternative" href="/atom.xml" title="WEB前端笔记" type="application/atom+xml">
@@ -80,14 +80,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/10/30/前端开发者手册/" title="前端开发者手册" itemprop="url">前端开发者手册</a>
+      <a href="/2015/11/20/YII2.0 Activeform表单组件的使用方法/" title="YII2.0 Activeform表单组件的使用方法" itemprop="url">YII2.0 Activeform表单组件的使用方法</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="wanzh" target="_blank" itemprop="author">wanzh</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-30T01:55:08.000Z" itemprop="datePublished"> 发表于 2015-10-30</time>
+    <time datetime="2015-11-20T08:20:03.000Z" itemprop="datePublished"> 发表于 2015-11-20</time>
     
   </p>
 </header>
@@ -100,9 +100,7 @@
 		
 		</div>
 		
-		<ul>
-<li><a href="https://github.com/dwqs/fedHandlebook" target="_blank" rel="external">前端开发者手册</a></li>
-</ul>
+		<p>Activeform<br>文本框:textInput();<br>密码框:passwordInput();<br>单选框:radio(),radioList();<br>复选框:checkbox(),checkboxList();<br>下拉框:dropDownList();<br>隐藏域:hiddenInput();<br>文本域:textarea([‘rows’=&gt;3]);<br>文件上传:fileInput();<br>提交按钮:submitButton();<br>重置按钮:resetButtun();<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="variable">$form</span> = ActiveForm::begin([</span><br><span class="line">    <span class="string">'action'</span> =&gt; [<span class="string">'test/getpost'</span>],</span><br><span class="line">    <span class="string">'method'</span>=&gt;<span class="string">'post'</span>,</span><br><span class="line">    ]); <span class="preprocessor">?&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> <span class="variable">$form</span>-&gt;field(<span class="variable">$model</span>, <span class="string">'username'</span>)-&gt;textInput([<span class="string">'maxlength'</span> =&gt; <span class="number">20</span>]) <span class="preprocessor">?&gt;</span></span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> <span class="variable">$form</span>-&gt;field(<span class="variable">$model</span>, <span class="string">'password'</span>)-&gt;passwordInput([<span class="string">'maxlength'</span> =&gt; <span class="number">20</span>]) <span class="preprocessor">?&gt;</span></span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> <span class="variable">$form</span>-&gt;field(<span class="variable">$model</span>, <span class="string">'sex'</span>)-&gt;radioList([<span class="string">'1'</span>=&gt;<span class="string">'男'</span>,<span class="string">'0'</span>=&gt;<span class="string">'女'</span>]) <span class="preprocessor">?&gt;</span></span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> <span class="variable">$form</span>-&gt;field(<span class="variable">$model</span>, <span class="string">'edu'</span>)-&gt;dropDownList([<span class="string">'1'</span>=&gt;<span class="string">'大学'</span>,<span class="string">'2'</span>=&gt;<span class="string">'高中'</span>,<span class="string">'3'</span>=&gt;<span class="string">'初中'</span>],</span><br><span class="line">                                              [<span class="string">'prompt'</span>=&gt;<span class="string">'请选择'</span>,<span class="string">'style'</span>=&gt;<span class="string">'width:120px'</span>]) <span class="preprocessor">?&gt;</span></span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> <span class="variable">$form</span>-&gt;field(<span class="variable">$model</span>, <span class="string">'file'</span>)-&gt;fileInput() <span class="preprocessor">?&gt;</span></span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> <span class="variable">$form</span>-&gt;field(<span class="variable">$model</span>, <span class="string">'hobby'</span>)-&gt;checkboxList([<span class="string">'0'</span>=&gt;<span class="string">'篮球'</span>,<span class="string">'1'</span>=&gt;<span class="string">'足球'</span>,<span class="string">'2'</span>=&gt;<span class="string">'羽毛球'</span>,<span class="string">'3'</span>=&gt;<span class="string">'乒乓球'</span>]) <span class="preprocessor">?&gt;</span></span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> <span class="variable">$form</span>-&gt;field(<span class="variable">$model</span>, <span class="string">'info'</span>)-&gt;textarea([<span class="string">'rows'</span>=&gt;<span class="number">3</span>]) <span class="preprocessor">?&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> <span class="variable">$form</span>-&gt;field(<span class="variable">$model</span>, <span class="string">'userid'</span>)-&gt;hiddenInput([<span class="string">'value'</span>=&gt;<span class="number">3</span>]) <span class="preprocessor">?&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> Html::submitButton(<span class="string">'提交'</span>, [<span class="string">'class'</span>=&gt;<span class="string">'btn btn-primary'</span>,<span class="string">'name'</span> =&gt;<span class="string">'submit-button'</span>]) <span class="preprocessor">?&gt;</span>   </span><br><span class="line"><span class="preprocessor">&lt;?</span> <span class="keyword">echo</span> Html::resetButton(<span class="string">'重置'</span>, [<span class="string">'class'</span>=&gt;<span class="string">'btn btn-primary'</span>,<span class="string">'name'</span> =&gt;<span class="string">'submit-button'</span>]) <span class="preprocessor">?&gt;</span></span><br><span class="line"><span class="preprocessor">&lt;?php</span> ActiveForm::end(); <span class="preprocessor">?&gt;</span></span><br></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -111,7 +109,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/web前端/">web前端</a>
+  <span></span> <a href="/tags/yii2-0/">yii2.0</a>
   </div>
 
 </div>
@@ -120,7 +118,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/10/30/前端开发者手册/" data-title="前端开发者手册 | WEB前端笔记" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/11/20/YII2.0 Activeform表单组件的使用方法/" data-title="YII2.0 Activeform表单组件的使用方法 | WEB前端笔记" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -133,19 +131,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/10/30/hello-world/" title="Hello World">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Hello World</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/10/18/提升HTML5的性能体验系列/"  title="移动端调试">
+<a href="/2015/11/18/小鲜 - 推荐5个前端开源代码和工具/"  title="">
  <strong>下一篇：</strong><br/> 
- <span>移动端调试
+ <span>(no title)
 </span>
 </a>
 </div>
