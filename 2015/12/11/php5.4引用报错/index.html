@@ -4,23 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>前端开发指南 | WEB开发笔记</title>
+    <title>php5.4引用报错 | WEB开发笔记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="wanzh">
     
 
     
-    <meta name="description" content="前端开发指南">
+    <meta name="description" content="–phpphp5.3系列版本以及以前版本，传引用没有什么问题，升级到php5.4以后，传引用的地方，全报错Fatal error: Call-time pass-by-reference has been removed in F:\work\wamp\www\test\test.php on line 6。看一下下面的例子。
+&amp;lt;?phpfunction test($aa,&amp;amp;$bb)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端开发指南">
-<meta property="og:url" content="http://yoursite.com/2015/10/10/前端开发指南/index.html">
+<meta property="og:title" content="php5.4引用报错">
+<meta property="og:url" content="http://yoursite.com/2015/12/11/php5.4引用报错/index.html">
 <meta property="og:site_name" content="WEB开发笔记">
-<meta property="og:description" content="前端开发指南">
-<meta property="og:updated_time" content="2015-10-30T02:12:02.404Z">
+<meta property="og:description" content="–phpphp5.3系列版本以及以前版本，传引用没有什么问题，升级到php5.4以后，传引用的地方，全报错Fatal error: Call-time pass-by-reference has been removed in F:\work\wamp\www\test\test.php on line 6。看一下下面的例子。
+&amp;lt;?phpfunction test($aa,&amp;amp;$bb)">
+<meta property="og:updated_time" content="2015-12-11T10:10:41.086Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端开发指南">
-<meta name="twitter:description" content="前端开发指南">
+<meta name="twitter:title" content="php5.4引用报错">
+<meta name="twitter:description" content="–phpphp5.3系列版本以及以前版本，传引用没有什么问题，升级到php5.4以后，传引用的地方，全报错Fatal error: Call-time pass-by-reference has been removed in F:\work\wamp\www\test\test.php on line 6。看一下下面的例子。
+&amp;lt;?phpfunction test($aa,&amp;amp;$bb)">
 
     
     <link rel="alternative" href="/atom.xml" title="WEB开发笔记" type="application/atom+xml">
@@ -80,14 +83,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/10/10/前端开发指南/" title="前端开发指南" itemprop="url">前端开发指南</a>
+      <a href="/2015/12/11/php5.4引用报错/" title="php5.4引用报错" itemprop="url">php5.4引用报错</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="wanzh" target="_blank" itemprop="author">wanzh</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-10T06:47:08.000Z" itemprop="datePublished"> 发表于 2015-10-10</time>
+    <time datetime="2015-12-11T10:04:12.000Z" itemprop="datePublished"> 发表于 2015-12-11</time>
     
   </p>
 </header>
@@ -100,19 +103,14 @@
 		
 		</div>
 		
-		<ul>
-<li><a href="https://github.com/w3crange/Front-End-Develop-Guide" target="_blank" rel="external">前端开发指南</a></li>
-</ul>
+		<p>–php<br>php5.3系列版本以及以前版本，传引用没有什么问题，升级到php5.4以后，传引用的地方，全报错<br>Fatal error: Call-time pass-by-reference has been removed in F:\work\wamp\www\test\test.php on line 6。看一下下面的例子。</p>
+<p>&lt;?php<br>function test($aa,&amp;$bb){<br>    if($aa &lt; $bb){<br>        $bb–;<br>        echo $bb.”<br>“;<br>        //test($aa,&amp;$bb);<br>    }<br>}<br>$aa = 3;<br>$bb = 6;<br>test($aa,$bb);  //php5.4,php5.3及以前版本，输入结果是5  </p>
+<p>//test($aa,&amp;$bb); //php5.3输入结果是5,php5.4及以后，报错Fatal error: Call-time pass-by-reference 。。。。<br>?&gt;<br>php5.4以后，定义时可以有&amp;，调用时加上&amp;就会报错。这样调用感觉很怪。<br>例3，php5.4以及递归传引用<br>&lt;?php<br>function test($aa,&amp;$bb){<br>    if($aa &lt; $bb){<br>        $bb–;<br>        echo $bb.”<br>“;<br>        test($aa,$bb);<br>    }<br>}<br>$aa = 3;<br>$bb = 6;<br>test($aa,$bb);<br>//php5.2,php5.3,php5.4都可以运行，运行结果：<br>5<br>4<br>3<br>?&gt;</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/web前端/">web前端</a>
-  </div>
 
 </div>
 
@@ -120,7 +118,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/10/10/前端开发指南/" data-title="前端开发指南 | WEB开发笔记" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/12/11/php5.4引用报错/" data-title="php5.4引用报错 | WEB开发笔记" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -134,18 +132,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/10/10/无线Web开发经验谈/" title="无线Web开发经验谈">
+ <a href="/2016/01/25/移动端适配方案/" title="移动端适配方案">
   <strong>上一篇：</strong><br/>
   <span>
-  无线Web开发经验谈</span>
+  移动端适配方案</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/10/10/移动端开发小记 - Flexbox/"  title="移动端开发小记 - Flexbox">
+<a href="/2015/12/03/test/"  title="test">
  <strong>下一篇：</strong><br/> 
- <span>移动端开发小记 - Flexbox
+ <span>test
 </span>
 </a>
 </div>
